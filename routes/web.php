@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'IndexController@index');
+
+Route::get('/test', function(){
+	$users = User::get();
+	dd($users);
+});
