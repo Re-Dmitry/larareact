@@ -1,5 +1,6 @@
 <?php
 
+use App\Product;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'IndexController@index');
 
 Route::get('/test', function(){
-	$users = User::get();
-	dd($users);
+	return response()->json(Product::get());
+	//return Product::get(); //ajax запрос
+	//$users = User::get();
+	//dd($users);
+	//$products = Product::with('category.subCategories')->get();
+	//dd($products);
+	
 });

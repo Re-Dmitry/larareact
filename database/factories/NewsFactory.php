@@ -2,13 +2,12 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Blog;
+use App\News;
 use Faker\Generator as Faker;
 
-$factory->define(Blog::class, function (Faker $faker) {
+$factory->define(News::class, function (Faker $faker) {
     return [
-		'title' => $faker->userName,
+		'title' => $faker->word(5),
 		'description' => $faker->text(30),
-		'author_id' => $faker->numberBetween(1,50),
     ];
 });

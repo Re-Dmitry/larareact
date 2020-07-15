@@ -1,9 +1,9 @@
 <?php
 
-use App\Blog;
+use App\Product;
 use Illuminate\Database\Seeder;
 
-class BlogSeeder extends Seeder
+class ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class BlogSeeder extends Seeder
      */
     public function run()
     {
-		factory(Blog::class,6)->create();
+		factory(Product::class,50)->create();
     }
 }
